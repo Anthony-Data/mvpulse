@@ -9,7 +9,7 @@ Site statique (HTML / CSS / JS, aucune dépendance ni build) : il se déploie te
 ```
 index.html            # Toutes les sections de la page
 assets/css/style.css  # Styles (charte noir & doré et polices dans :root en haut du fichier)
-assets/js/main.js     # Menu mobile, animations, formulaire
+assets/js/main.js     # Menu mobile, animations
 assets/img/           # Logo (icône, version horizontale), favicon, image de partage, photos
 ```
 
@@ -20,6 +20,11 @@ python3 -m http.server 8000
 ```
 
 Puis ouvrir http://localhost:8000.
+
+## Formulaire de contact
+
+La section Contact intègre le Google Form des coachs (iframe) : les réponses arrivent directement dans leur Google Form.
+Pour changer de formulaire, remplacer l'URL dans `index.html` (section CONTACT).
 
 ## À personnaliser
 
@@ -36,5 +41,4 @@ Puis ouvrir http://localhost:8000.
 
 - Déploiement sur Vercel (import du repo GitHub, aucun réglage nécessaire)
 - Nom de domaine (ex. `mvpulse.fr`)
-- Formulaire avec envoi réel (Formspree, ou fonction Vercel + Resend) au lieu du `mailto:`
 - Prise de rendez-vous en ligne (Calendly / Cal.com)

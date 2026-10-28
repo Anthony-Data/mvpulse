@@ -202,7 +202,7 @@
               <li>Bilan hebdomadaire</li>
               <li>Échanges par message</li>
             </ul>
-            <a href="#contact" class="btn btn--ghost btn--block" data-offer="Coaching en ligne">Je choisis cette formule</a>
+            <a href="#contact" class="btn btn--ghost btn--block">Je choisis cette formule</a>
           </article>
 
           <article class="card card--featured reveal">
@@ -217,7 +217,7 @@
               <li>Plan nutrition personnalisé</li>
               <li>Suivi des mesures & progrès</li>
             </ul>
-            <a href="#contact" class="btn btn--block" data-offer="Coaching individuel">Je choisis cette formule</a>
+            <a href="#contact" class="btn btn--block">Je choisis cette formule</a>
           </article>
 
           <article class="card reveal">
@@ -231,7 +231,7 @@
               <li>Tarif dégressif</li>
               <li>Ambiance motivante garantie</li>
             </ul>
-            <a href="#contact" class="btn btn--ghost btn--block" data-offer="Small group">Je choisis cette formule</a>
+            <a href="#contact" class="btn btn--ghost btn--block">Je choisis cette formule</a>
           </article>
         </div>
       </div>
@@ -351,6 +351,7 @@
           <p class="eyebrow reveal">Contact</p>
           <h2 class="section__title reveal">Prêt·e à <span class="accent">démarrer</span> ?</h2>
           <p class="reveal">Réserve ta séance découverte gratuite. Remplis le formulaire ou écris-nous directement sur Instagram, on te répond sous 24h.</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSceHnG6FeyifEcFsNC_xNY66pXaZ85nYVSvVqrzuPcyajZGdg/viewform" target="_blank" rel="noopener" class="btn btn--ghost reveal">Ouvrir le formulaire ↗</a>
           <ul class="contact-list reveal">
             <li>
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
@@ -367,41 +368,10 @@
           </ul>
         </div>
 
-        <form class="form reveal" id="contact-form" novalidate>
-          <div class="form__row">
-            <label>
-              <span>Prénom</span>
-              <input type="text" name="prenom" autocomplete="given-name" required>
-            </label>
-            <label>
-              <span>Nom</span>
-              <input type="text" name="nom" autocomplete="family-name">
-            </label>
-          </div>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label>
-            <span>Téléphone</span>
-            <input type="tel" name="telephone" autocomplete="tel">
-          </label>
-          <label>
-            <span>Formule qui t'intéresse</span>
-            <select name="formule" id="formule">
-              <option>Je ne sais pas encore</option>
-              <option>Coaching en ligne</option>
-              <option>Coaching individuel</option>
-              <option>Small group</option>
-            </select>
-          </label>
-          <label>
-            <span>Ton objectif</span>
-            <textarea name="message" rows="4" placeholder="Ex : perdre 5 kg avant l'été, reprendre le sport après une blessure…" required></textarea>
-          </label>
-          <button type="submit" class="btn btn--block">Envoyer ma demande</button>
-          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
-        </form>
+        <!-- Formulaire Google Forms intégré : les réponses arrivent directement dans le Google Form des coachs. -->
+        <div class="gform reveal">
+          <iframe class="gform__frame" src="https://docs.google.com/forms/d/e/1FAIpQLSceHnG6FeyifEcFsNC_xNY66pXaZ85nYVSvVqrzuPcyajZGdg/viewform?embedded=true" title="Formulaire de contact MVPulse" loading="lazy">Chargement du formulaire…</iframe>
+        </div>
       </div>
     </section>
   </main>

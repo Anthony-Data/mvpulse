@@ -1,8 +1,5 @@
 // MVPulse — interactions du site
 
-// Adresse qui reçoit les demandes du formulaire (en attendant un vrai service d'envoi).
-const CONTACT_EMAIL = "contact@mvpulse.fr";
-
 document.documentElement.classList.remove("no-js");
 
 // ----- Menu mobile -----
@@ -77,56 +74,6 @@ if ("IntersectionObserver" in window) {
 } else {
   counters.forEach((el) => (el.textContent = el.dataset.count));
 }
-
-// ----- Présélection de la formule depuis les cartes -----
-const formuleSelect = document.getElementById("formule");
-document.querySelectorAll("[data-offer]").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    formuleSelect.value = btn.dataset.offer;
-  });
-});
-
-// ----- Formulaire de contact -----
-// Premier jet : ouvre le client mail avec la demande pré-remplie.
-// À remplacer plus tard par un service (Formspree, Resend, fonction Vercel…).
-const form = document.getElementById("contact-form");
-const status = document.getElementById("form-status");
-
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const required = form.querySelectorAll("[required]");
-  let valid = true;
-  required.forEach((field) => {
-    const ok = field.value.trim() !== "" && field.checkValidity();
-    field.classList.toggle("is-invalid", !ok);
-    if (!ok) valid = false;
-  });
-
-  if (!valid) {
-    status.textContent = "Merci de remplir les champs obligatoires (prénom, email valide, objectif).";
-    status.className = "form__status is-error";
-    return;
-  }
-
-  const data = new FormData(form);
-  const subject = `Séance découverte — ${data.get("prenom")} ${data.get("nom")}`.trim();
-  const body = [
-    `Prénom : ${data.get("prenom")}`,
-    `Nom : ${data.get("nom")}`,
-    `Email : ${data.get("email")}`,
-    `Téléphone : ${data.get("telephone")}`,
-    `Formule : ${data.get("formule")}`,
-    "",
-    "Objectif :",
-    data.get("message"),
-  ].join("\n");
-
-  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-  status.textContent = "Ton application mail va s'ouvrir avec ta demande. Tu peux aussi nous écrire sur Instagram !";
-  status.className = "form__status is-success";
-});
 
 // ----- Année du footer -----
 document.getElementById("year").textContent = new Date().getFullYear();
