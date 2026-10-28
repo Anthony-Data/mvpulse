@@ -631,21 +631,53 @@ p { margin: 0 0 1rem; }
 .contact-list li { display: flex; align-items: center; gap: 14px; }
 .contact-list a:hover { color: var(--accent); }
 
-.split--contact .split__content .btn { margin-top: 1.5rem; }
 .split--contact .split__content { position: sticky; top: calc(var(--header-h) + 32px); }
-.gform {
+.signup {
+  background:
+    radial-gradient(90% 60% at 100% 0%, rgba(224, 184, 90, 0.16), transparent 70%),
+    var(--surface);
+  border: 1px solid rgba(224, 184, 90, 0.4);
   border-radius: 20px;
-  border: 1px solid var(--border);
-  background: #fff;
-  overflow: hidden;
+  padding: 40px 36px;
   box-shadow: 0 30px 60px -30px rgba(224, 184, 90, 0.35);
 }
-.gform__frame {
-  display: block;
-  width: 100%;
-  height: 1100px;
-  border: 0;
+.signup__tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid rgba(224, 184, 90, 0.4);
+  border-radius: 999px;
+  padding: 5px 12px;
+  margin-bottom: 1rem;
 }
+.signup__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+}
+.signup__steps { list-style: none; padding: 0; margin: 0 0 2rem; display: grid; gap: 22px; }
+.signup__steps li { display: flex; gap: 16px; align-items: flex-start; }
+.signup__steps span {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--gold-gradient);
+  color: var(--on-accent);
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+.signup__steps strong { display: block; margin-bottom: 2px; }
+.signup__steps p { color: var(--muted); font-size: 0.92rem; margin: 0; }
+.signup .btn { padding: 18px 28px; font-size: 1rem; }
+.signup__note { color: var(--muted); font-size: 0.8rem; text-align: center; margin: 12px 0 0; }
 
 /* ----- Footer ----- */
 .footer { padding: 40px 0; border-top: 1px solid var(--border); }
@@ -722,7 +754,7 @@ p { margin: 0 0 1rem; }
   .hero__cta .btn { width: 100%; }
   .stats { gap: 16px 32px; }
   .stats strong { font-size: 2.1rem; }
-  .gform__frame { height: 1250px; }
+  .signup { padding: 28px 22px; }
   .outline { -webkit-text-stroke-width: 1.5px; }
   .footer__inner { flex-direction: column; text-align: center; }
 }

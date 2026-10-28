@@ -23,7 +23,7 @@ Puis ouvrir http://localhost:8000.
 
 ## Formulaire de contact
 
-La section Contact intègre le Google Form des coachs (iframe) : les réponses arrivent directement dans leur Google Form.
+La section Contact renvoie vers le Google Form des coachs (bouton « Remplir le questionnaire ») : les réponses arrivent directement dans leur Google Form.
 Pour changer de formulaire, remplacer l'URL dans `index.html` (section CONTACT).
 
 ## À personnaliser
