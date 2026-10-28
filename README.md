@@ -23,8 +23,8 @@ Puis ouvrir http://localhost:8000.
 
 ## À personnaliser
 
-- [ ] Photo du coach : déposer `assets/img/coach.jpg` et remplacer le bloc `photo-placeholder` dans `index.html`
-- [ ] Diplôme dans le badge (`BPJEPS AF` par défaut)
+- [x] Photos et prénoms des coachs (Morgan, Valentin)
+- [ ] Bio et spécialités de chaque coach (section « L'équipe »)
 - [ ] Chiffres clés du hero (`data-count`)
 - [ ] Formules et tarifs (à reprendre du post Instagram des tarifs)
 - [ ] Vrais témoignages clients (avec leur accord)
