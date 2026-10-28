@@ -8,9 +8,9 @@ Site statique (HTML / CSS / JS, aucune dépendance ni build) : il se déploie te
 
 ```
 index.html            # Toutes les sections de la page
-assets/css/style.css  # Styles (couleurs et polices dans :root en haut du fichier)
+assets/css/style.css  # Styles (charte noir & doré et polices dans :root en haut du fichier)
 assets/js/main.js     # Menu mobile, animations, formulaire
-assets/img/           # Favicon, image de partage, photos
+assets/img/           # Logo (icône, version horizontale), favicon, image de partage, photos
 ```
 
 ## Voir le site en local
@@ -26,7 +26,7 @@ Puis ouvrir http://localhost:8000.
 - [ ] Photo du coach : déposer `assets/img/coach.jpg` et remplacer le bloc `photo-placeholder` dans `index.html`
 - [ ] Diplôme dans le badge (`BPJEPS AF` par défaut)
 - [ ] Chiffres clés du hero (`data-count`)
-- [ ] Formules et tarifs
+- [ ] Formules et tarifs (à reprendre du post Instagram des tarifs)
 - [ ] Vrais témoignages clients (avec leur accord)
 - [ ] Email de contact (`index.html` + `CONTACT_EMAIL` dans `assets/js/main.js`)
 - [ ] Ville / zone d'intervention
