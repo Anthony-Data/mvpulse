@@ -124,7 +124,7 @@ form.addEventListener("submit", (event) => {
 
   window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-  status.textContent = "Ton application mail va s'ouvrir avec ta demande. Tu peux aussi m'écrire sur Instagram !";
+  status.textContent = "Ton application mail va s'ouvrir avec ta demande. Tu peux aussi nous écrire sur Instagram !";
   status.className = "form__status is-success";
 });
 
